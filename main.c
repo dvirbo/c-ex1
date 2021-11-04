@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "NumClass.h"
 
+// Author: Dvirb
+
 /////////////***////////////////
 void print_prime(int min, int max)
 {
@@ -69,6 +71,8 @@ void print_func(int min, int max)
   print_prime(min, max);
   print_strong(min, max);
 }
+
+//main function :
 
 int main()
 {

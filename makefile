@@ -3,7 +3,7 @@ AR=ar -rcs
 FLAGS=-Wall -g
 OBJECTS_MAIN=main.o
 
-all: loops recurcives loopd recursived mains maindloop maindrec
+all: loops loopd recurcives recursived maindloop maindrec mains
 
 loops: libclassloop.a
 recurcives: libclassrec.a
@@ -20,7 +20,7 @@ libclassrec.so: basicClassification.o advancedClassificationRecursion.o NumClass
 	$(CC) -shared -o libclassrec.so basicClassification.o advancedClassificationLoop.o -lm
 
 libclassloops.so: basicClassification.o advancedClassificationLoop.o NumClass.h
-	$(CC) -shared -o libclassloops.so basicClassification.o advancedClassificationRecursion.o -lm
+	$(CC) -shared -o libclassloops.so basicClassification.o advancedClassificationLoop.o -lm
 
 mainsloop: main.o libclassloop.a
 	$(CC) $(FLAGS) -o mainsloop $(OBJECTS_MAIN) libclassloop.a -lm
