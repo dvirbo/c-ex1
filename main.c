@@ -22,6 +22,7 @@ void print_prime(int min, int max)
 /////////////***////////////////
 void print_amstrong(int min, int max)
 {
+  printf("\n");
    printf("The Armstrong numbers are:");
   int print_ans;
   while (min <= max)
