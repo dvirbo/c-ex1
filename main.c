@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "NumClass.h"
+# define True 1
 
 // Author: Dvirb
 
@@ -13,7 +14,7 @@ void print_prime(int min, int max)
   while (min <= max)
   {
     print_ans = isPrime(min);
-    if (print_ans == 1) // mean that the ans is True
+    if (print_ans == True) // mean that the ans is True
       printf(" %d", min);
     min++;
   }
@@ -22,13 +23,12 @@ void print_prime(int min, int max)
 /////////////***////////////////
 void print_amstrong(int min, int max)
 {
- // printf("\n");
    printf("The Armstrong numbers are:");
   int print_ans;
   while (min <= max)
   {
     print_ans = isArmstrong(min);
-    if (print_ans == 1) // mean that the ans is True
+    if (print_ans == True) // mean that the ans is True
       printf(" %d", min);
     min++;
   }
@@ -37,30 +37,26 @@ void print_amstrong(int min, int max)
 /////////////***////////////////
 void print_strong(int min, int max)
 {
-  printf("\n");
-  printf("The Strong numbers are:");
+  printf("\nThe Strong numbers are:");
   int print_ans;
   while (min <= max)
   {
     print_ans = isStrong(min);
-    if (print_ans == 1) // mean that the ans is True
+    if (print_ans == True) // mean that the ans is True
       printf(" %d", min);
     min++;
   }
-    printf("\n");
-
 }
 
 /////////////***////////////////
 void print_Palindrome(int min, int max)
 {
-  printf("\n");
-  printf("The Palindromes are:");
+  printf("\nThe Palindromes are:");
   int print_ans;
   while (min <= max)
   {
     print_ans = isPalindrome(min);
-    if (print_ans == 1) // mean that the ans is True
+    if (print_ans == True) // mean that the ans is True
       printf(" %d", min);
     min++;
   }
@@ -68,7 +64,6 @@ void print_Palindrome(int min, int max)
 
 void print_func(int min, int max)
 {
-
   print_amstrong(min, max);
   print_Palindrome(min, max);
   print_prime(min, max);
@@ -86,5 +81,7 @@ int main()
     print_func(y, x);
   else
     print_func(x, y);
+    
+        printf("\n");
   return 0;
 }
